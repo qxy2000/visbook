@@ -1,0 +1,277 @@
+@font-face {
+    font-family: 'Source Han Sans SC';
+    src: url('/fonts/SourceHanSansSC-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Source Han Sans SC';
+    src: url('/fonts/SourceHanSansSC-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Source Han Sans SC';
+    src: url('/fonts/SourceHanSansSC-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .course-outline {
+    font-family: 'Source Han Sans SC';
+    color: #1D2129;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #C5BCBC;
+    overflow: hidden;
+    margin-bottom: 75px;
+    
+    .course-section {
+      position: relative;
+      transition: background-color 0.3s ease;
+  
+      // 分隔线，使其居中，且左右有空隙
+    &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        left: 32px;  // 左侧空隙
+        right: 32px; // 右侧空隙
+        bottom: 0;
+        height: 1px;
+        background-color: #E9EEF6;
+      }
+  
+  
+      .section-main {
+        padding: 24px 32px;  // 移动padding到这里
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        position: relative;  // 添加相对定位
+
+        // 使用伪元素来实现带空隙的hover效果
+        &::before {
+          content: '';
+          position: absolute;
+          top: 8px;          // 上方空隙
+          bottom: 8px;       // 下方空隙
+          left: 15px;        // 左侧空隙
+          right: 15px;       // 右侧空隙
+          background-color: transparent;
+          border-radius: 8px;  // 添加圆角
+          transition: background-color 0.3s ease;
+          pointer-events: none;  // 确保不影响鼠标事件
+          z-index: 0;        // 确保在内容下层
+        }
+      
+        &:hover {
+          &::before {
+            background-color: #F1F6FE;
+          }
+        }
+      
+        // 确保内容在伪元素之上
+        .section-left, .detail-btn {
+          position: relative;
+          z-index: 1;
+        }
+  
+        .section-left {
+          flex: 1;
+          min-width: 0;
+          padding-right: 24px;
+  
+          .section-title {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+          }
+  
+          .chapter-info {
+            display: flex;
+            gap: 16px;
+  
+            .chapter-count {
+              font-size: 18px;
+              font-weight: 500;
+              color: #888888;
+              white-space: nowrap;
+            }
+  
+            .chapter-desc {
+              text-align: left;
+              flex: 1;
+              font-size: 18px;
+              font-weight: 350;
+              color: #888888;
+              line-height: 1.6;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+            }
+          }
+        }
+  
+        .detail-btn {
+          color: #888888;
+          padding: 0;
+          font-size: 18px;
+          font-weight: 500;
+          height: auto;
+          flex-shrink: 0;
+          transition: color 0.3s ease;
+          display: flex;      // 添加 flex 布局
+          align-items: center; // 使图标和文字垂直居中
+  
+          &:hover {
+            color: #4971FF;
+          }
+  
+          .icon {
+            font-size: 16px;
+            margin-left: 4px;
+          }
+        }
+      }
+  
+      // 展开时的样式
+      &.expanded {
+        .section-main {
+          background-color: #fff;
+        }
+  
+        .lesson-list {
+          background-color: #fff;
+          padding: 0 32px 24px;
+          margin-top: 0;
+          
+          .lesson-header {
+            // padding: 16px 0;
+            padding-bottom: 16px;
+            padding-top: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-bottom: 16px;
+            border-bottom: 1px solid #E5E7EB;
+  
+            .video-icon {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              color: #000000;
+              font-size: 18px;
+              font-weight: 700;
+            }
+          }
+  
+          .lesson-item {
+            padding: 9px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // cursor: pointer;
+            transition: color 0.3s ease;
+            border-bottom: 1px solid #F4F4F4;
+
+            // 使用相邻选择器：当后面还有 lesson-item 时才显示边框
+            & + .lesson-item {
+              border-top: 1px solid #F4F4F4;
+              border-bottom: none;
+            }
+  
+            // &:hover {
+            //   .lesson-title {
+            //     color: #4971FF;
+                
+            //     .play-icon {
+            //       opacity: 1;
+            //     }
+            //   }
+            // }
+  
+            .lesson-title {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              font-size: 18px;
+              font-weight: 350;
+  
+              .play-icon {
+                color: #4971FF;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+              }
+            }
+  
+            .lesson-duration {
+              font-size: 18px;
+              font-weight: 350;
+              color: #86909C;
+            }
+          }
+  
+          .materials-section {
+            margin-top: 5px;
+            padding-top: 24px;
+            border-top: 1px solid #F2F3F5;
+  
+            .material-buttons {
+              display: flex;
+              gap: 24px;
+  
+              button {
+                color: #000000;
+                font-size: 18px;
+                font-weight: 700;
+                padding: 0;
+                transition: color 0.3s ease;
+  
+                &:hover {
+                  color: #4971FF;
+                }
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // 视频模态框样式保持不变
+  .video-modal {
+    .ant-modal-header {
+      margin-bottom: 0;
+      padding: 16px 24px;
+    }
+  
+    .ant-modal-content {
+      padding: 0;
+      overflow: hidden;
+    }
+  
+    .ant-modal-body {
+      padding: 0;
+    }
+  
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+  
+      .video-player {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+      }
+    }
+  }

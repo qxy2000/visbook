@@ -1,0 +1,94 @@
+
+@font-face {
+    font-family: 'Abhaya Libre';
+    font-style: normal;
+    font-weight: 800;  // ExtraBold weight
+    font-display: swap;
+    src: url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap');
+  }
+
+  @font-face {
+    font-family: 'Source Han Sans SC';
+    src: url('/fonts/SourceHanSansSC-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Source Han Sans SC';
+    src: url('/fonts/SourceHanSansSC-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Source Han Sans SC';
+    src: url('/fonts/SourceHanSansSC-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+
+.course-grid {
+    padding: 0px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 75px;
+  
+    .course-card {
+      height: 100%;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+  
+      .course-cover {
+        height: 200px;
+        overflow: hidden;
+        background-color: #f5f5f5;
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all 0.3s ease;
+        }
+      }
+  
+      .course-title {
+        .ant-card-meta-title {
+          font-size: 14px;
+          margin-bottom: 0;
+          white-space: normal;
+          line-height: 1.5;
+          color: rgba(0, 0, 0, 0.85);
+          text-align: left;
+        }
+      }
+    }
+  }
+  
+  // 响应式调整
+  @media screen and (max-width: 768px) {
+    .course-grid {
+      .course-card {
+        .course-cover {
+          height: 160px;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .course-grid {
+      padding: 16px;
+      
+      .course-card {
+        .course-cover {
+          height: 180px;
+        }
+      }
+    }
+  }

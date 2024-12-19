@@ -1,0 +1,76 @@
+
+  
+  @font-face {
+    font-family: 'Source Han Sans SC';
+    src: url('/fonts/SourceHanSansSC-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Source Han Sans SC';
+    src: url('/fonts/SourceHanSansSC-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Source Han Sans SC';
+    src: url('/fonts/SourceHanSansSC-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+
+  .instructor-list {
+    margin-bottom: 50px;
+
+    .instructor-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .instructor-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        cursor: pointer;  // 鼠标悬停时显示手型光标
+    
+        &:hover {
+          transform: translateY(-6px);  // 向上浮动
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);  // 添加阴影
+        }
+  
+        .ant-card-body {
+          padding: 20px 24px;
+        }
+  
+        .avatar-wrapper {
+          width: 95px;
+          height: 95px;
+          margin: 0 auto 12px;
+          
+          .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+  
+        .instructor-name {
+          font-family: 'Source Han Sans SC';
+          font-size: 20px;
+          font-weight: 700;
+          color: #1D2129;
+          margin: 0;
+        }
+      }
+    }
+  }

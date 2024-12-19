@@ -1,0 +1,199 @@
+@font-face {
+    font-family: 'Abhaya Libre';
+    font-style: normal;
+    font-weight: 800;  // ExtraBold weight
+    font-display: swap;
+    src: url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap');
+  }
+
+  @font-face {
+    font-family: 'Source Han Sans SC';
+    src: url('/fonts/SourceHanSansSC-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Source Han Sans SC';
+    src: url('/fonts/SourceHanSansSC-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Source Han Sans SC';
+    src: url('/fonts/SourceHanSansSC-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+.nav-bar {
+    background: #fff;
+    border-bottom: 1px solid #eaeaea;
+  
+    .nav-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+    }
+  
+    .logo {
+      color: #4971FF;
+      font-size: 24px;
+      font-weight: 800;
+      font-family: 'Abhaya Libre', serif;
+    }
+  
+  }
+  
+  .header-content {
+    background-color: #fff;
+    padding: 28px 0;
+    position: relative;
+
+    // 背景遮罩层
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: calc(100% - 85px); // 让背景在cards中间结束
+        background-color: #F4F6FC;
+        z-index: 0;
+    }
+    
+    .title-section {
+    position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      z-index: 1;
+  
+      .main-title {
+        text-align: left;
+        font-size: 50px;
+        font-family: 'Source Han Sans SC';
+        font-weight: 700;
+        color: #000;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        line-height: 1.2;
+      }
+  
+      .sub-title {
+        text-align: left;
+        font-size: 30px;
+        font-family: 'Source Han Sans SC';
+        font-weight: 700;
+        color: #111827;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+  
+      .description {
+        margin-bottom: 18px;
+  
+        .desc-text {
+          text-align: left;
+          color: #4B5563;
+          line-height: 1.8;
+          margin-bottom: 14px;
+          font-size: 18px;
+          font-family: 'Source Han Sans SC';
+          font-weight: 350;
+  
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  
+    .course-features-wrapper {
+        position: relative;
+        max-width: 1200px; // 增加最大宽度
+        margin: 0 auto 0px;
+        padding: 10px 40px; // 调整两侧内边距
+        z-index: 1;
+      
+        &:hover .course-features {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+      }
+      
+      .course-features {
+        display: flex;
+        background: #fff;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      
+        .feature-card {
+          flex: 1;
+          background: transparent;
+          border-radius: 0;
+          position: relative;
+          margin: 0;
+          box-shadow: none !important;
+          min-width: 0; // 防止flex子项溢出
+      
+          // 分隔线
+          &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 72px;
+            background-color: #E5E7EB;
+          }
+      
+          .ant-card-body {
+            padding: 10px 16px; // 增加上下内边距
+          }
+      
+          .feature-content {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            min-width: 0; // 防止内容溢出
+          }
+      
+          .feature-title {
+            font-size: 20px;
+            font-family: 'Source Han Sans SC';
+            font-weight: 700;
+            color: #1D2129;
+            margin-top: 5px;
+            margin-bottom: 5px; // 增加标题和描述的间距
+            line-height: 1.4;
+            white-space: nowrap; // 标题不换行
+          }
+      
+          .feature-desc {
+            font-size: 15px;
+            font-family: 'Source Han Sans SC';
+            font-weight: 400;
+            color: #86909C;
+            line-height: 1.57;
+            margin: 0;
+            margin-bottom: 5px; 
+            display: -webkit-box;
+            -webkit-line-clamp: 2; // 限制两行
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+
+  }
+
+  
