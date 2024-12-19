@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "./visbook/static/css/main.9c52a2c1.css",
-    "main.js": "./visbook/static/js/main.644f164f.js",
-    "static/js/453.00698185.chunk.js": "./visbook/static/js/453.00698185.chunk.js",
-    "static/media/SourceHanSansSC-Bold.otf": "./visbook/static/media/SourceHanSansSC-Bold.fcb688eb60d2a2d55cd1.otf",
-    "static/media/SourceHanSansSC-Medium.otf": "./visbook/static/media/SourceHanSansSC-Medium.8d4d1a546d6ef4096d8e.otf",
-    "static/media/SourceHanSansSC-Regular.otf": "./visbook/static/media/SourceHanSansSC-Regular.9e7a10965dd54b1340c8.otf",
-    "index.html": "./visbook/index.html",
-    "main.9c52a2c1.css.map": "./visbook/static/css/main.9c52a2c1.css.map",
-    "main.644f164f.js.map": "./visbook/static/js/main.644f164f.js.map",
-    "453.00698185.chunk.js.map": "./visbook/static/js/453.00698185.chunk.js.map"
+    "main.css": "./static/css/main.9c52a2c1.css",
+    "main.js": "./static/js/main.a46cfaec.js",
+    "static/js/453.00698185.chunk.js": "./static/js/453.00698185.chunk.js",
+    "static/media/SourceHanSansSC-Bold.otf": "./static/media/SourceHanSansSC-Bold.fcb688eb60d2a2d55cd1.otf",
+    "static/media/SourceHanSansSC-Medium.otf": "./static/media/SourceHanSansSC-Medium.8d4d1a546d6ef4096d8e.otf",
+    "static/media/SourceHanSansSC-Regular.otf": "./static/media/SourceHanSansSC-Regular.9e7a10965dd54b1340c8.otf",
+    "index.html": "./index.html",
+    "main.9c52a2c1.css.map": "./static/css/main.9c52a2c1.css.map",
+    "main.a46cfaec.js.map": "./static/js/main.a46cfaec.js.map",
+    "453.00698185.chunk.js.map": "./static/js/453.00698185.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9c52a2c1.css",
-    "static/js/main.644f164f.js"
+    "static/js/main.a46cfaec.js"
   ]
 }
